@@ -1,0 +1,41 @@
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px;
+}
+
+.sales-overview__articles {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.sales-overview__item {
+    border-radius: 4px;
+    text-align: center;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 320px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.products-sold {
+    border: 2px solid #51bd83;
+    color: #51bd83;
+    background-color: #e3fff0;
+}
+
+.products-original-stock {
+    border: 2px solid #51abbd;
+    color: #51abbd;
+    background-color: #e1f9fc;
+}
+
+.products-in-stock {
+    border: 2px solid #d16354;
+    color: #d16354;
+    background-color: #fce0dc;
+}
