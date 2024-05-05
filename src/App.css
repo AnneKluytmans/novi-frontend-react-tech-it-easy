@@ -1,7 +1,7 @@
 .dashboard-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 48px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .sales-overview__articles {
@@ -12,6 +12,7 @@
 
 .sales-overview__item {
     border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 24px;
 
@@ -20,6 +21,10 @@
     flex-basis: 320px;
     flex-grow: 0;
     flex-shrink: 1;
+}
+
+.sales-overview__item h3 {
+    font-weight: 500;
 }
 
 .products-sold {
@@ -38,4 +43,49 @@
     border: 2px solid #d16354;
     color: #d16354;
     background-color: #fce0dc;
+}
+
+.product {
+    background-color: #eff0eb;
+    border: 2px solid #9c871f;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.best-selling-product {
+    background-color: #eff0eb;
+    border: 2px solid #9c871f;
+}
+
+.product__image {
+    flex-basis: 300px;
+    flex-shrink: 1;
+    flex-grow: 0;
+    margin: 32px;
+}
+
+.product__info h3 {
+    font-size: 22px;
+}
+
+.product__price {
+    font-size: 24px;
+}
+
+.product__options-list {
+    display: flex;
+    gap: 18px;
+
+    list-style: none;
+    padding-left: 0;
+}
+
+.icon {
+    width: 16px;
+    margin-right: 8px;
 }

@@ -1,8 +1,13 @@
 import './App.css'
-import {inventory} from "./constants/inventory.js";
+import minus from './assets/minus.png';
+import check from './assets/check.png';
+import {bestSellingTv, inventory} from "./constants/inventory.js";
 import calculateSoldProducts from "./helpers/calculateSoldProducts.js";
 import calculateOriginalStock from "./helpers/calculateOriginalStock.js";
 import calculateProductsInStock from "./helpers/calculateProductsInStock.js";
+import createTvName from "./helpers/createTvName.js";
+import createTvPrice from "./helpers/createTvPrice.js";
+import createTvScreenSizes from "./helpers/createTvScreenSizes.js";
 
 function App() {
   return (
@@ -26,9 +31,41 @@ function App() {
             </article>
           </div>
         </section>
+        <section className="best-seller-overview">
+          <h2>Best verkochte tv</h2>
+          <article className="product best-selling-product">
+            <span className="product__image">
+              <img src={bestSellingTv.sourceImg} alt="Afbeelding van de best verkochte tv"/>
+            </span>
+            <div className="product__info">
+              <h3>{createTvName(bestSellingTv)}</h3>
+              <p className="product__price">{createTvPrice(bestSellingTv.price)}</p>
+              <p>{createTvScreenSizes(bestSellingTv.availableSizes)}</p>
+              <ul className="product__options-list">
+                <li><img src={check} alt="Icoon: aanwezig" className="icon"/>wifi</li>
+                <li><img src={minus} alt="Icoon: niet aanwezig" className="icon"/>speech</li>
+                <li><img src={check} alt="Icoon: aanwezig" className="icon"/>hdr</li>
+                <li><img src={check} alt="Icoon: aanwezig" className="icon"/>bluetooth</li>
+                <li><img src={minus} alt="Icoon: niet aanwezig" className="icon"/>ambilight</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Alle tvs</h2>
+          <button type="button" /*onClick={sortBestSellers}*/>
+            Meest verkocht eerst
+          </button>
+          <button type="button" /*onClick={sortCheapest}*/>
+            Goedkoopste eerst
+          </button>
+          <button type="button" /*onClick={sortSport}*/>
+            Meest geschikt voor sport eerst
+          </button>
+        </section>
       </main>
       </>
-  )
+)
 }
 
 export default App
