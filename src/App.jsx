@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import minus from './assets/minus.png';
 import check from './assets/check.png';
 import {bestSellingTv, inventory} from "./constants/inventory.js";
@@ -51,8 +51,8 @@ function App() {
             </div>
           </article>
         </section>
-        <section>
-          <h2>Alle tvs</h2>
+        <section className="products-overview">
+          <h2>Alle tv's</h2>
           <button type="button" /*onClick={sortBestSellers}*/>
             Meest verkocht eerst
           </button>
