@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500;700&display=swap');
 
 :root {
   font-synthesis: none;
@@ -11,4 +11,27 @@
 body {
   font-family: 'Zen Kaku Gothic New', Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  font-size: 16px;
+  letter-spacing: 1px;
+  background-color: #eff0eb;
+  border-radius: 50px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  padding: 8px 16px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #f9faf5;
+  box-shadow: 0 5px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
+button + button {
+  margin-left: 20px;
 }
