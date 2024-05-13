@@ -31,6 +31,14 @@ function App() {
             </article>
           </div>
         </section>
+        <section className="available-brands">
+          <h2>Beschikbare merken</h2>
+          <ul>
+            {inventory.map((product) => {
+              return <li key={product.type}>{product.brand}</li>
+            })}
+          </ul>
+        </section>
         <section className="best-seller-overview">
           <h2>Best verkochte tv</h2>
           <article className="product best-selling-product">
@@ -62,10 +70,34 @@ function App() {
           <button type="button" /*onClick={sortSport}*/>
             Meest geschikt voor sport eerst
           </button>
+          {inventory.map((product) => {
+            return (
+                <article className="product" key={product.type}>
+                  <span className="product__image">
+                    <img src={product.sourceImg} alt="Afbeelding van de tv"/>
+                  </span>
+                  <div className="product__info">
+                    <h3>{createTvName(product)}</h3>
+                    <p className="product__price">{createTvPrice(product.price)}</p>
+                    <p>{createTvScreenSizes(product.availableSizes)}</p>
+                    <ul className="product__options-list">
+                      {product.options.map((option) => {
+                        if (option.applicable === true) {
+                          return <li key={option.name}><img src={check} alt="Icoon: aanwezig" className="icon"/>{option.name}</li>
+                        } else {
+                          return <li key={option.name}><img src={minus} alt="Icoon: niet aanwezig" className="icon"/>{option.name}</li>
+                        }
+                      })}
+                    </ul>
+                  </div>
+                </article>
+                )
+            })
+          }
         </section>
       </main>
       </>
-)
+  )
 }
 
 export default App

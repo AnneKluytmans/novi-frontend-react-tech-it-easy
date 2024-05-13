@@ -45,9 +45,16 @@
     background-color: #fce0dc;
 }
 
+.available-brands ul {
+    font-size: 18px;
+    list-style-type: square;
+
+    display: flex;
+    gap: 40px;
+    padding-left: 22px;
+}
+
 .product {
-    background-color: #eff0eb;
-    border: 2px solid #9c871f;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 16px;
@@ -78,10 +85,11 @@
 }
 
 .product__options-list {
+    font-size: 18px;
+    list-style: none;
+
     display: flex;
     gap: 18px;
-
-    list-style: none;
     padding-left: 0;
 }
 

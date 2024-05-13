@@ -53,6 +53,7 @@ console.log(largeScreenProducts);
 
 
 //--------------Opdracht 1F---------------------
+//Gebruik array-methoden om alle informatie te verzamelen van de tv's die over ambilight beschikken.
 const ambilightProducts = inventory.filter((product) => {
     const optionAmbilight = product.options.find((option) => {
         return option.name === "ambilight";
