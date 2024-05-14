@@ -2,6 +2,16 @@
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    opacity: 0.8;
+
+    position: absolute;
+    top: 30px;
+    right: 10px;
 }
 
 .sales-overview__articles {
@@ -62,6 +72,7 @@
 
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .best-selling-product {
@@ -93,8 +104,21 @@
     padding-left: 0;
 }
 
+.sold-out-icon {
+    width: 100px;
+
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
 .icon {
     width: 16px;
     margin-right: 8px;
 }
 
+.footer {
+    text-align: center;
+    background-color: #fce0dc;
+    padding: 1px;
+}
