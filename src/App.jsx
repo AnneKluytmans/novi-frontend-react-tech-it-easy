@@ -129,7 +129,7 @@ function App() {
                       <p>{createTvScreenSizes(product.availableSizes)}</p>
                       <ul className="product__options-list">
                         {product.options.map((option) => {
-                          if (option.applicable === true) {
+                          if (option.applicable) {
                             return <li key={option.name}><img src={check} alt="Icoon: aanwezig"
                                                               className="icon"/>{option.name}</li>
                           } else {
